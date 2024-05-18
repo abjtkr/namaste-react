@@ -1,0 +1,5 @@
+# Parcel
+-Dev Build
+- Local Server 
+- HRM - Hot odule Replacement 
+- use a File Watching Algorithm - written in c++
