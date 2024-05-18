@@ -1,4 +1,5 @@
-/01/node_modules 
+/**/node_modules 
 .*/
 # Ignore all directories starting with a dot recursively
 /**/.*/
+/**/dist
