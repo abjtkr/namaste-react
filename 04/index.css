@@ -1,3 +1,124 @@
-#heading {
-    color: red;
+:root {
+  --primary-color: #84a98c; /* Calming Green */
+  --secondary-color: #cad2c5; /* Light Gray */
+  --accent-color: #354f52; /* Dark Teal */
+  --text-color: #333;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: #f5f5f5; /* Light Gray Background */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-bottom: 4px solid var(--accent-color); /* Pronounced Bottom Border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  height: 50px;
+  width: auto;
+}
+
+.header ol {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  transition: color 0.3s ease;
+  position: relative; /* For Underline Effect */
+}
+
+.header li::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.header li:hover::before {
+  width: 100%;
+}
+
+.body {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.res-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.restroCard {
+  border: 2px solid var(--secondary-color); /* Pronounced Border */
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.restroCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.restroCard .res-card {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.restroCard:hover .res-card {
+  transform: scale(1.05);
+}
+
+.restroCard h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: var(--accent-color);
+}
+
+.restroCard p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.App {
+  font-family: var(--font-family);
 }
