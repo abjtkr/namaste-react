@@ -10,15 +10,20 @@ const RestroCard = (props) => {
     costForTwo,
     locality,
     areaName,
-  } = resData?.info;
+  } = resData;
   return (
     <div className='restroCard'>
       <img className='res-card' src={CDN_URL + cloudinaryImageId}></img>
       <h3>{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
-      <h4> {avgRatingString} stars , {totalRatingsString} ratings</h4>
+      <h4>
+        {" "}
+        {avgRatingString} stars , {totalRatingsString} ratings
+      </h4>
       <h4>{locality.name}</h4>
-      <h4>{locality} {areaName}</h4>
+      <h4>
+        {locality} {areaName}
+      </h4>
       <h4>{costForTwo}</h4>
     </div>
   );

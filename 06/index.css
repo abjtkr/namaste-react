@@ -58,18 +58,24 @@ body {
   width: 100%;
 }
 
+.login-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #6e8f72; /* Updated color */
+}
 .body {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.search {
-  margin-bottom: 20px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .res-container {
@@ -122,8 +128,40 @@ body {
 .App {
   font-family: var(--font-family);
 }
+.search {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #6e8f72;
+}
+
 .filter {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -150,4 +188,47 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
+}
+
+.skeleton-card {
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.res-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skeleton-card .shimmer-container {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Light Gray */
+  position: relative;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+  background-size: 1000px 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
 }
